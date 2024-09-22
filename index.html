@@ -136,11 +136,26 @@
               />
             </div>
             <!-- action btn  -->
-            <a
-              href=""
+            <button
               class="btn bg-primary_color hover:bg-primary_color font-semibold text-black px-8 text-xl w-full"
-              >Donate Now</a
+              onclick="my_modal_1.showModal()"
             >
+              Donate Now >
+            </button>
+            <dialog id="my_modal_1" class="modal modal-bottom sm:modal-middle">
+              <div class="modal-box">
+                <h3 class="text-lg font-bold">Hello!</h3>
+                <p class="py-4">
+                  Press ESC key or click the button below to close
+                </p>
+                <div class="modal-action">
+                  <form method="dialog">
+                    <!-- if there is a button in form, it will close the modal -->
+                    <button class="btn">Close</button>
+                  </form>
+                </div>
+              </div>
+            </dialog>
           </div>
         </div>
         <!-- card 01 end  -->
@@ -187,11 +202,26 @@
               />
             </div>
             <!-- action btn  -->
-            <a
-              href=""
+            <button
               class="btn bg-primary_color hover:bg-primary_color font-semibold text-black px-8 text-xl w-full"
-              >Donate Now</a
+              onclick="my_modal_2.showModal()"
             >
+              Donate Now >
+            </button>
+            <dialog id="my_modal_2" class="modal modal-bottom sm:modal-middle">
+              <div class="modal-box">
+                <h3 class="text-lg font-bold">Hello!</h3>
+                <p class="py-4">
+                  Press ESC key or click the button below to close
+                </p>
+                <div class="modal-action">
+                  <form method="dialog">
+                    <!-- if there is a button in form, it will close the modal -->
+                    <button class="btn">Close</button>
+                  </form>
+                </div>
+              </div>
+            </dialog>
           </div>
         </div>
         <!-- card 02 end  -->
@@ -238,16 +268,15 @@
                 placeholder="Enter donation amount"
               />
             </div>
-            <!-- action btn  -->
+            <!-- action btn  with modals-->
 
-            <button onclick="my_modal_5.showModal()">
-              <a
-                href=""
-                class="btn bg-primary_color hover:bg-primary_color font-semibold text-black px-8 text-xl w-full"
-                >Donate Now</a
-              >
+            <button
+              class="btn bg-primary_color hover:bg-primary_color font-semibold text-black px-8 text-xl w-full"
+              onclick="my_modal_3.showModal()"
+            >
+              Donate Now >
             </button>
-            <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
+            <dialog id="my_modal_3" class="modal modal-bottom sm:modal-middle">
               <div class="modal-box">
                 <h3 class="text-lg font-bold">Hello!</h3>
                 <p class="py-4">
