@@ -64,7 +64,7 @@
                 <img src="assets/coin.png" alt="" />
               </figure>
               <h4 class="font-medium text-xl text-black/70">
-                0 <span>BDT</span>
+                <span id="main_balance" class="mx-1">8000</span>BDT
               </h4>
             </div>
           </div>
@@ -73,7 +73,7 @@
       <!-- nav end  -->
       <!-- banner section start  -->
       <!-- btn grp  -->
-      <section class="py-12">
+      <section class="py-8 hidden">
         <div class="flex justify-center gap-4">
           <a
             href=""
@@ -111,7 +111,7 @@
               <div class="badge bg-black/5 flex gap-4 p-6">
                 <img src="assets/coin.png" alt="" />
                 <h5 class="font-semibold text-black/70 text-base">
-                  <span class="mx-1">0</span>BDT
+                  <span id="noakhaliBalance" class="mx-1">0</span>BDT
                 </h5>
               </div>
             </div>
@@ -132,12 +132,14 @@
             <div>
               <input
                 type="text"
+                id="donateForNoakhali"
                 class="border border-gray-300 rounded-lg px-4 py-2 w-full focus:outline-none focus:ring-2 focus:ring-primary_color"
                 placeholder="Enter donation amount"
               />
             </div>
             <!-- action btn  -->
             <button
+              id="donateBtn1"
               class="btn bg-primary_color hover:bg-primary_color font-semibold text-black px-8 text-xl w-full"
               onclick="my_modal_1.showModal()"
             >
@@ -177,7 +179,7 @@
               <div class="badge bg-black/5 flex gap-4 p-6">
                 <img src="assets/coin.png" alt="" />
                 <h5 class="font-semibold text-black/70 text-base">
-                  <span class="mx-1">600</span>BDT
+                  <span id="feniBalance" class="mx-1">600</span>BDT
                 </h5>
               </div>
             </div>
@@ -198,12 +200,14 @@
             <div>
               <input
                 type="text"
+                id="donateForFeni"
                 class="border border-gray-300 rounded-lg px-4 py-2 w-full focus:outline-none focus:ring-2 focus:ring-primary_color"
                 placeholder="Enter donation amount"
               />
             </div>
             <!-- action btn  -->
             <button
+              id="donateBtn2"
               class="btn bg-primary_color hover:bg-primary_color font-semibold text-black px-8 text-xl w-full"
               onclick="my_modal_2.showModal()"
             >
@@ -243,7 +247,7 @@
               <div class="badge bg-black/5 flex gap-4 p-6">
                 <img src="assets/coin.png" alt="" />
                 <h5 class="font-semibold text-black/70 text-base">
-                  <span class="mx-1">2400</span>BDT
+                  <span id="qoutaBanlance" class="mx-1">2400</span>BDT
                 </h5>
               </div>
             </div>
@@ -265,6 +269,7 @@
             <div>
               <input
                 type="text"
+                id="donateForQuota"
                 class="border border-gray-300 rounded-lg px-4 py-2 w-full focus:outline-none focus:ring-2 focus:ring-primary_color"
                 placeholder="Enter donation amount"
               />
@@ -272,6 +277,7 @@
             <!-- action btn  with modals-->
 
             <button
+              id="donateBtn3"
               class="btn bg-primary_color hover:bg-primary_color font-semibold text-black px-8 text-xl w-full"
               onclick="my_modal_3.showModal()"
             >
