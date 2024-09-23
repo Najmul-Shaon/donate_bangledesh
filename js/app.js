@@ -19,7 +19,6 @@ function getElement(id) {
 // set element by id
 function setElement(id, value) {
   const result = getElement(id);
-  console.log(result);
   result.innerText = value;
 }
 
@@ -27,6 +26,28 @@ function setElement(id, value) {
 function toNumber(String) {
   const result = parseInt(String);
   return result;
+}
+
+// input validations
+function inputValidation(
+  inputedTaka,
+  mainBalance,
+  newMainBalance,
+  newNoakhaliBalance,
+  main_balanceId,
+  placeId
+) {
+  if (
+    inputedTaka <= 0 ||
+    isNaN(inputedTaka) ||
+    mainBalance < inputedTaka ||
+    mainBalance === 0
+  ) {
+    return alert("Please input a valid amount!!!");
+  } else {
+    setElement(main_balanceId, newMainBalance);
+    setElement(placeId, newNoakhaliBalance);
+  }
 }
 
 // noakhali card
@@ -39,8 +60,24 @@ donateBtn1.addEventListener("click", function () {
   const noakhaliBalance = toNumber(innerText("noakhaliBalance"));
   const newMainBalance = mainBalance - inputedTaka;
   const newNoakhaliBalance = noakhaliBalance + inputedTaka;
-  setElement("main_balance", newMainBalance);
-  setElement("noakhaliBalance", newNoakhaliBalance);
+  inputValidation(
+    inputedTaka,
+    mainBalance,
+    newMainBalance,
+    newNoakhaliBalance,
+    "main_balance",
+    "noakhaliBalance"
+  );
+
+  console.log(
+    typeof inputedTaka,
+    inputedTaka,
+    typeof inp,
+    mainBalance,
+    noakhaliBalance,
+    newMainBalance,
+    newNoakhaliBalance
+  );
 });
 
 const donateBtn2 = getElement("donateBtn2");
@@ -51,8 +88,16 @@ donateBtn2.addEventListener("click", function () {
   const feniBalance = toNumber(innerText("feniBalance"));
   const newMainBalance = mainBalance - inputedTaka;
   const newFeniBalance = feniBalance + inputedTaka;
-  setElement("main_balance", newMainBalance);
-  setElement("feniBalance", newFeniBalance);
+  inputValidation(
+    inputedTaka,
+    mainBalance,
+    newMainBalance,
+    newFeniBalance,
+    "main_balance",
+    "feniBalance"
+  );
+  //   setElement("main_balance", newMainBalance);
+  //   setElement("feniBalance", newFeniBalance);
 });
 
 const donateBtn3 = getElement("donateBtn3");
@@ -63,6 +108,14 @@ donateBtn3.addEventListener("click", function () {
   const qoutaBanlance = toNumber(innerText("qoutaBanlance"));
   const newMainBalance = mainBalance - inputedTaka;
   const newQoutaBanlance = qoutaBanlance + inputedTaka;
-  setElement("main_balance", newMainBalance);
-  setElement("qoutaBanlance", newQoutaBanlance);
+  inputValidation(
+    inputedTaka,
+    mainBalance,
+    newMainBalance,
+    newQoutaBanlance,
+    "main_balance",
+    "qoutaBanlance"
+  );
+  //   setElement("main_balance", newMainBalance);
+  //   setElement("qoutaBanlance", newQoutaBanlance);
 });
