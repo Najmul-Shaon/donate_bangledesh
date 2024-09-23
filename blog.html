@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- daisy ui cdn  -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- google font  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Donate Bangladesh</title>
+    <link rel="shortcut icon" href="assets/logo.png" type="image/x-icon" />
+  </head>
+  <!-- customised tailwind -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary_color: "#B4F461",
+          },
+          fontFamily: {
+            lexend: ["Lexend", "sans-serif"],
+          },
+        },
+      },
+    };
+  </script>
+  <body class="font-lexend">
+    <header class="sticky top-0 backdrop-blur bg-white/30">
+      <!-- nav start  -->
+      <nav class="bg-[#F9F7F3] py-4">
+        <div class="navbar container mx-auto">
+          <div class="navbar-start">
+            <a
+              href="index.html"
+              class="btn bg-primary_color hover:bg-primary_color font-semibold text-black px-8 text-xl"
+              >Home</a
+            >
+          </div>
+          <div class="navbar-center">
+            <div class="flex items-center gap-4">
+              <figure>
+                <img src="assets/logo.png" alt="" />
+              </figure>
+              <h3 class="font-semibold text-xl text-black">
+                Donate Bangladesh
+              </h3>
+            </div>
+          </div>
+          <div class="navbar-end">
+            <div class="flex items-center gap-4">
+              <figure>
+                <img src="assets/coin.png" alt="" />
+              </figure>
+              <h4 class="font-medium text-xl text-black/70">
+                0 <span>BDT</span>
+              </h4>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <!-- nav end  -->
+      <!-- banner section start  -->
+      <!-- btn grp  -->
+      <section class="py-12">
+        <div class="flex justify-center gap-4">
+          <a
+            href=""
+            class="btn bg-primary_color hover:bg-primary_color font-semibold text-black px-8 text-xl"
+            >Donation</a
+          >
+          <a
+            href=""
+            class="btn btn-outline font-semibold text-black px-8 text-xl"
+            >History</a
+          >
+        </div>
+      </section>
+      <!-- banner section end  -->
+    </header>
+
+    <!-- main start  -->
+    <main class="">
+      <!-- faq question  -->
+      <section class="container mx-auto">
+        <div class="join join-vertical w-full">
+          <div class="collapse collapse-arrow join-item border-base-300 border">
+            <input type="radio" name="my-accordion-4" checked="checked" />
+            <div class="collapse-title text-xl font-medium">
+              Click to open this one and close others
+            </div>
+            <div class="collapse-content">
+              <p>hello</p>
+            </div>
+          </div>
+          <div class="collapse collapse-arrow join-item border-base-300 border">
+            <input type="radio" name="my-accordion-4" />
+            <div class="collapse-title text-xl font-medium">
+              Click to open this one and close others
+            </div>
+            <div class="collapse-content">
+              <p>hello</p>
+            </div>
+          </div>
+          <div class="collapse collapse-arrow join-item border-base-300 border">
+            <input type="radio" name="my-accordion-4" />
+            <div class="collapse-title text-xl font-medium">
+              Click to open this one and close others
+            </div>
+            <div class="collapse-content">
+              <p>hello</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer></footer>
+    <!-- js file  -->
+    <script src="js/app.js"></script>
+  </body>
+</html>
