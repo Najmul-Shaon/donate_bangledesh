@@ -17,6 +17,11 @@
       href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap"
       rel="stylesheet"
     />
+    <!-- fontawesome  -->
+    <script
+      src="https://kit.fontawesome.com/0c1139f033.js"
+      crossorigin="anonymous"
+    ></script>
 
     <title>Donate Bangladesh</title>
     <link rel="shortcut icon" href="assets/logo.png" type="image/x-icon" />
@@ -41,7 +46,7 @@
       <!-- nav start  -->
       <nav class="bg-[#F9F7F3] py-4">
         <div class="navbar container mx-auto">
-          <div class="navbar-start">
+          <div class="navbar-start hidden md:block">
             <a
               href="blog.html"
               class="btn bg-primary_color hover:bg-primary_color font-semibold text-black px-8 text-xl"
@@ -60,13 +65,16 @@
           </div>
           <div class="navbar-end">
             <div class="flex items-center gap-4">
-              <figure>
+              <figure class="hidden md:block">
                 <img src="assets/coin.png" alt="" />
               </figure>
-              <h4 class="font-medium text-xl text-black/70">
+              <h4 class="font-medium text-xl text-black/70 hidden md:block">
                 <span id="main_balance" class="mx-1">8000</span>BDT
               </h4>
             </div>
+          </div>
+          <div>
+            <i class="fa-solid fa-bars font-bold text-lg block md:hidden"></i>
           </div>
         </div>
       </nav>
@@ -101,9 +109,11 @@
       <!-- donate card section  -->
       <section id="donationSection" class="container mx-auto py-20 space-y-8">
         <!-- card 01  -->
-        <div class="flex items-stretch gap-8 p-8 border rounded-2xl">
+        <div
+          class="flex flex-col md:flex-row items-stretch gap-8 p-8 border rounded-2xl"
+        >
           <!-- card image  -->
-          <figure class="w-1/2 border border-dashed">
+          <figure class="w-full md:w-1/2 border border-dashed">
             <img
               class="w-full h-full object-cover"
               src="assets/noakhali.png"
@@ -111,7 +121,7 @@
             />
           </figure>
           <!-- card content  -->
-          <div class="w-1/2 flex flex-col justify-evenly">
+          <div class="w-full md:w-1/2 flex flex-col justify-evenly">
             <!-- card amount  -->
             <div>
               <div class="badge bg-black/5 flex gap-4 p-6">
@@ -152,14 +162,20 @@
               Donate Now >
             </button>
             <dialog id="my_modal_1" class="modal modal-bottom sm:modal-middle">
-              <div class="modal-box">
-                <h3 class="text-lg font-bold">Hello!</h3>
-                <p class="py-4">
-                  Press ESC key or click the button below to close
+              <div class="modal-box flex flex-col items-center">
+                <h3 class="text-3xl font-bold text-black">
+                  Congratulations!!!
+                </h3>
+                <figure>
+                  <img src="assets/coin.png" alt="" />
+                </figure>
+                <p class="py-4 font-semibold text-black/70">
+                  You Have Donated for Humankind
                 </p>
+                <h2 class="text-2xl text-black font-semibold">Successfully</h2>
                 <div class="modal-action">
                   <form method="dialog">
-                    <button class="btn">Close</button>
+                    <button class="btn">Close Confirmation</button>
                   </form>
                 </div>
               </div>
@@ -168,9 +184,11 @@
         </div>
         <!-- card 01 end  -->
         <!-- card 02  -->
-        <div class="flex items-stretch gap-8 p-8 border rounded-2xl">
+        <div
+          class="flex flex-col md:flex-row items-stretch gap-8 p-8 border rounded-2xl"
+        >
           <!-- card image  -->
-          <figure class="w-1/2 border border-dashed">
+          <figure class="w-full md:w-1/2 border border-dashed">
             <img
               class="w-full h-full object-cover"
               src="assets/feni.png"
@@ -178,7 +196,7 @@
             />
           </figure>
           <!-- card content  -->
-          <div class="w-1/2 flex flex-col justify-evenly">
+          <div class="w-full md:w-1/2 flex flex-col justify-evenly">
             <!-- card amount  -->
             <div>
               <div class="badge bg-black/5 flex gap-4 p-6">
@@ -219,15 +237,20 @@
               Donate Now >
             </button>
             <dialog id="my_modal_2" class="modal modal-bottom sm:modal-middle">
-              <div class="modal-box">
-                <h3 class="text-lg font-bold">Hello!</h3>
-                <p class="py-4">
-                  Press ESC key or click the button below to close
+              <div class="modal-box flex flex-col items-center">
+                <h3 class="text-3xl font-bold text-black">
+                  Congratulations!!!
+                </h3>
+                <figure>
+                  <img src="assets/coin.png" alt="" />
+                </figure>
+                <p class="py-4 font-semibold text-black/70">
+                  You Have Donated for Humankind
                 </p>
+                <h2 class="text-2xl text-black font-semibold">Successfully</h2>
                 <div class="modal-action">
                   <form method="dialog">
-                    if there is a button in form, it will close the modal
-                    <button class="btn">Close</button>
+                    <button class="btn">Close Confirmation</button>
                   </form>
                 </div>
               </div>
@@ -236,9 +259,11 @@
         </div>
         <!-- card 02 end  -->
         <!-- card 03  -->
-        <div class="flex items-stretch gap-8 p-8 border rounded-2xl">
+        <div
+          class="flex flex-col md:flex-row items-stretch gap-8 p-8 border rounded-2xl"
+        >
           <!-- card image  -->
-          <figure class="w-1/2 border border-dashed">
+          <figure class="w-full md:w-1/2 border border-dashed">
             <img
               class="w-full h-full object-cover"
               src="assets/quota-protest.png"
@@ -246,7 +271,7 @@
             />
           </figure>
           <!-- card content  -->
-          <div class="w-1/2 flex flex-col justify-evenly">
+          <div class="w-full md:w-1/2 flex flex-col justify-evenly">
             <!-- card amount  -->
             <div>
               <div class="badge bg-black/5 flex gap-4 p-6">
@@ -289,15 +314,20 @@
               Donate Now >
             </button>
             <dialog id="my_modal_3" class="modal modal-bottom sm:modal-middle">
-              <div class="modal-box">
-                <h3 class="text-lg font-bold">Hello!</h3>
-                <p class="py-4">
-                  Press ESC key or click the button below to close
+              <div class="modal-box flex flex-col items-center">
+                <h3 class="text-3xl font-bold text-black">
+                  Congratulations!!!
+                </h3>
+                <figure>
+                  <img src="assets/coin.png" alt="" />
+                </figure>
+                <p class="py-4 font-semibold text-black/70">
+                  You Have Donated for Humankind
                 </p>
+                <h2 class="text-2xl text-black font-semibold">Successfully</h2>
                 <div class="modal-action">
                   <form method="dialog">
-                    <!-- if there is a button in form, it will close the modal -->
-                    <button class="btn">Close</button>
+                    <button class="btn">Close Confirmation</button>
                   </form>
                 </div>
               </div>
