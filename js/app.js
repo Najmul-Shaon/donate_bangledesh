@@ -163,12 +163,28 @@ donateBtn3.addEventListener("click", function () {
 
 // while click donation button
 getElement("donationBtn").addEventListener("click", function () {
+  // getElement("donationBtn").classList.add(
+  //   "bg-primary_color",
+  //   " hover:bg-primary_color"
+  // );
+  // getElement("historyBtn").classList.remove(
+  //   "bg-primary_color",
+  //   " hover:bg-primary_color"
+  // );
+  getElement("donationBtn").classList.add("bg-primary_color");
+  getElement("donationBtn").classList.remove("btn-outline");
+  getElement("historyBtn").classList.remove("bg-primary_color");
+  getElement("historyBtn").classList.add("btn-outline");
   getElement("donationSection").classList.remove("hidden");
   getElement("donation_history_container").classList.add("hidden");
   console.log("donationBtn");
 });
 // while click history button
 getElement("historyBtn").addEventListener("click", function () {
+  getElement("donationBtn").classList.remove("bg-primary_color");
+  getElement("donationBtn").classList.add("btn-outline");
+  getElement("historyBtn").classList.add("bg-primary_color");
+  getElement("historyBtn").classList.remove("btn-outline");
   getElement("donationSection").classList.add("hidden");
   getElement("donation_history_container").classList.remove("hidden");
 });
