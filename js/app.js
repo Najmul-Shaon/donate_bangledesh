@@ -48,8 +48,6 @@ function inputValidation(
   } else {
     setElement(main_balanceId, newMainBalance);
     setElement(placeId, newNoakhaliBalance);
-
-    // const cardTitle = innerText("quotaTitle");
     const historySection = getElement("donation_history_container");
     const newDiv = document.createElement("Div");
     newDiv.classList.add("border", "p-8", "rounded-2xl", "space-y-4");
@@ -59,13 +57,9 @@ function inputValidation(
       new Date().getMonth() + 1
     }/${new Date().getDate()} at ${new Date().getHours()}:${new Date().getMinutes()}:${new Date().getSeconds()}
   `;
-
     historySection.appendChild(newDiv);
-
-    console.log(cardTitle);
   }
 }
-
 // noakhali card
 
 const donateBtn1 = getElement("donateBtn1");
@@ -86,16 +80,6 @@ donateBtn1.addEventListener("click", function () {
     "noakhaliBalance",
     innerText("noakhaliTitle")
   );
-
-  console.log(
-    typeof inputedTaka,
-    inputedTaka,
-    typeof inp,
-    mainBalance,
-    noakhaliBalance,
-    newMainBalance,
-    newNoakhaliBalance
-  );
 });
 
 const donateBtn2 = getElement("donateBtn2");
@@ -115,8 +99,6 @@ donateBtn2.addEventListener("click", function () {
     "feniBalance",
     innerText("feniTitle")
   );
-  //   setElement("main_balance", newMainBalance);
-  //   setElement("feniBalance", newFeniBalance);
 });
 
 const donateBtn3 = getElement("donateBtn3");
@@ -136,48 +118,17 @@ donateBtn3.addEventListener("click", function () {
     "qoutaBanlance",
     innerText("quotaTitle")
   );
-
-  // const cardTitle = innerText("quotaTitle");
-  // const historySection = getElement("donation_history_container");
-  // const newDiv = document.createElement("Div");
-  // newDiv.classList.add("border", "p-8", "rounded-2xl", "space-y-4");
-  // newDiv.innerHTML = `
-  //  <h3 class="text-lg text-black font-bold">${inputedTaka} Taka is Donated for ${cardTitle}</h3>
-  //         <p class="text-base text-black/70 font-light">Date: ${new Date().getFullYear()}/${
-  //   new Date().getMonth() + 1
-  // }/${new Date().getDate()} at ${new Date().getHours()}:${new Date().getMinutes()}:${new Date().getSeconds()}
-  // `;
-
-  // historySection.appendChild(newDiv);
-
-  // console.log(historySection, cardTitle, newDiv);
-
-  // if()
-  //   setElement("main_balance", newMainBalance);
-  //   setElement("qoutaBanlance", newQoutaBanlance);
 });
 
-// donateBtn3.addEventListener("click", function () {});
-
 // hide unhide donation and history section
-
 // while click donation button
 getElement("donationBtn").addEventListener("click", function () {
-  // getElement("donationBtn").classList.add(
-  //   "bg-primary_color",
-  //   " hover:bg-primary_color"
-  // );
-  // getElement("historyBtn").classList.remove(
-  //   "bg-primary_color",
-  //   " hover:bg-primary_color"
-  // );
   getElement("donationBtn").classList.add("bg-primary_color");
   getElement("donationBtn").classList.remove("btn-outline");
   getElement("historyBtn").classList.remove("bg-primary_color");
   getElement("historyBtn").classList.add("btn-outline");
   getElement("donationSection").classList.remove("hidden");
   getElement("donation_history_container").classList.add("hidden");
-  console.log("donationBtn");
 });
 // while click history button
 getElement("historyBtn").addEventListener("click", function () {

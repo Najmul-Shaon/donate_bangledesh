@@ -41,7 +41,7 @@
       <!-- nav start  -->
       <nav class="bg-[#F9F7F3] py-4">
         <div class="navbar container mx-auto">
-          <div class="navbar-start">
+          <div class="navbar-start hidden md:block">
             <a
               href="index.html"
               class="btn bg-primary_color hover:bg-primary_color font-semibold text-black px-8 text-xl"
@@ -60,72 +60,114 @@
           </div>
           <div class="navbar-end">
             <div class="flex items-center gap-4">
-              <figure>
+              <figure class="hidden md:block">
                 <img src="assets/coin.png" alt="" />
               </figure>
-              <h4 class="font-medium text-xl text-black/70">
-                0 <span>BDT</span>
+              <h4 class="font-medium text-xl text-black/70 hidden md:block">
+                <span id="main_balance" class="mx-1">8000</span>BDT
               </h4>
             </div>
+          </div>
+          <div>
+            <i class="fa-solid fa-bars font-bold text-lg block md:hidden"></i>
           </div>
         </div>
       </nav>
       <!-- nav end  -->
-      <!-- banner section start  -->
-      <!-- btn grp  -->
-      <section class="py-12">
-        <div class="flex justify-center gap-4">
-          <a
-            href=""
-            class="btn bg-primary_color hover:bg-primary_color font-semibold text-black px-8 text-xl"
-            >Donation</a
-          >
-          <a
-            href=""
-            class="btn btn-outline font-semibold text-black px-8 text-xl"
-            >History</a
-          >
-        </div>
-      </section>
-      <!-- banner section end  -->
     </header>
 
     <!-- main start  -->
-    <main class="">
+    <main class="my-20">
       <!-- faq question  -->
       <section class="container mx-auto">
         <div class="join join-vertical w-full">
           <div class="collapse collapse-arrow join-item border-base-300 border">
             <input type="radio" name="my-accordion-4" checked="checked" />
             <div class="collapse-title text-xl font-medium">
-              Click to open this one and close others
+              What is the Document Object Model (DOM)?
             </div>
             <div class="collapse-content">
-              <p>hello</p>
+              <p>
+                The Document Object Model (DOM) is a programming interface for
+                web documents. It represents the structure of a webpage as a
+                tree of objects, where each node corresponds to a part of the
+                document (such as elements, attributes, or text).
+              </p>
             </div>
           </div>
           <div class="collapse collapse-arrow join-item border-base-300 border">
             <input type="radio" name="my-accordion-4" />
             <div class="collapse-title text-xl font-medium">
-              Click to open this one and close others
+              How do you select an element from the DOM?
             </div>
             <div class="collapse-content">
-              <p>hello</p>
+              <p>
+                To select an element from the DOM, you can use methods like
+                getElementById() to select an element by its unique ID,
+                getElementsByClassName() to select elements by their class name,
+                or getElementsByTagName() to select by tag name. More flexible
+                options include querySelector() to select the first element that
+                matches a CSS selector and querySelectorAll() to select all
+                elements that match a given selector. These methods allow you to
+                access and manipulate HTML elements dynamically through
+                JavaScript.
+              </p>
             </div>
           </div>
           <div class="collapse collapse-arrow join-item border-base-300 border">
             <input type="radio" name="my-accordion-4" />
             <div class="collapse-title text-xl font-medium">
-              Click to open this one and close others
+              What is event delegation in the context of the DOM, and why is it
+              useful?
             </div>
             <div class="collapse-content">
-              <p>hello</p>
+              <p>
+                1. Performance Optimization: Rather than attaching multiple
+                event listeners to individual child elements, event delegation
+                uses just one listener on the parent. This reduces memory usage
+                and speeds up the handling of dynamic elements. <br />
+                2. Handles Dynamic Content: If child elements are added or
+                removed dynamically (e.g., items added to a list), event
+                delegation ensures that the parent continues to listen for
+                events on those newly added elements without needing additional
+                event listeners. <br />
+                3. Cleaner Code: Instead of managing multiple event listeners
+                for potentially many child elements, you manage one listener on
+                a parent, which simplifies your code.
+              </p>
+            </div>
+          </div>
+          <div class="collapse collapse-arrow join-item border-base-300 border">
+            <input type="radio" name="my-accordion-4" />
+            <div class="collapse-title text-xl font-medium">
+              How do you manipulate an element's attributes and styles using the
+              DOM?
+            </div>
+            <div class="collapse-content">
+              <p>
+                To manipulate an element's attributes and styles in the DOM, you
+                can use methods like setAttribute(), getAttribute(), and
+                removeAttribute() to work with attributes such as src, href, and
+                alt. For example, setAttribute("src", "new-image.jpg") changes
+                the image source. For styles, the style property allows direct
+                manipulation of inline CSS by setting properties like
+                backgroundColor or width. Additionally, the classList property
+                helps manage CSS classes—using methods like add(), remove(), and
+                toggle() to dynamically modify an element's appearance by adding
+                or removing predefined styles.
+              </p>
             </div>
           </div>
         </div>
       </section>
     </main>
-    <footer></footer>
+    <footer>
+      <div class="py-16 bg-gray-100 mt-16">
+        <p class="text-center text-base text-black/70">
+          Copyright © Najmul Shaon
+        </p>
+      </div>
+    </footer>
     <!-- js file  -->
     <script src="js/app.js"></script>
   </body>
