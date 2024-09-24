@@ -73,18 +73,20 @@
       <!-- nav end  -->
       <!-- banner section start  -->
       <!-- btn grp  -->
-      <section class="py-8 hidden">
+      <section class="py-8">
         <div class="flex justify-center gap-4">
-          <a
-            href=""
+          <button
+            id="donationBtn"
             class="btn bg-primary_color hover:bg-primary_color font-semibold text-black px-8 text-xl"
-            >Donation</a
           >
-          <a
-            href=""
+            Donation
+          </button>
+          <button
+            id="historyBtn"
             class="btn btn-outline font-semibold text-black px-8 text-xl"
-            >History</a
           >
+            History
+          </button>
         </div>
       </section>
       <!-- banner section end  -->
@@ -93,7 +95,7 @@
     <!-- main start  -->
     <main class="">
       <!-- donate card section  -->
-      <section class="container mx-auto py-20 space-y-8">
+      <section id="donationSection" class="container mx-auto py-20 space-y-8">
         <!-- card 01  -->
         <div class="flex items-stretch gap-8 p-8 border rounded-2xl">
           <!-- card image  -->
@@ -116,7 +118,7 @@
               </div>
             </div>
             <!-- card title  -->
-            <h3 class="font-bold text-xl text-black">
+            <h3 id="noakhaliTitle" class="font-bold text-xl text-black">
               Donate for Flood at Noakhali, Bangladesh
             </h3>
             <!-- card info  -->
@@ -183,7 +185,7 @@
               </div>
             </div>
             <!-- card title  -->
-            <h3 class="font-bold text-xl text-black">
+            <h3 id="feniTitle" class="font-bold text-xl text-black">
               Donate for Flood Relief in Feni,Bangladesh
             </h3>
             <!-- card info  -->
@@ -303,7 +305,7 @@
       <!-- History start -->
       <section
         id="donation_history_container"
-        class="container mx-auto space-y-4"
+        class="container mx-auto space-y-4 hidden"
       >
         <!-- card  -->
       </section>

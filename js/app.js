@@ -35,7 +35,8 @@ function inputValidation(
   newMainBalance,
   newNoakhaliBalance,
   main_balanceId,
-  placeId
+  placeId,
+  cardTitle
 ) {
   if (
     inputedTaka <= 0 ||
@@ -47,6 +48,21 @@ function inputValidation(
   } else {
     setElement(main_balanceId, newMainBalance);
     setElement(placeId, newNoakhaliBalance);
+
+    // const cardTitle = innerText("quotaTitle");
+    const historySection = getElement("donation_history_container");
+    const newDiv = document.createElement("Div");
+    newDiv.classList.add("border", "p-8", "rounded-2xl", "space-y-4");
+    newDiv.innerHTML = `
+   <h3 class="text-lg text-black font-bold">${inputedTaka} Taka is Donated for ${cardTitle}</h3>
+          <p class="text-base text-black/70 font-light">Date: ${new Date().getFullYear()}/${
+      new Date().getMonth() + 1
+    }/${new Date().getDate()} at ${new Date().getHours()}:${new Date().getMinutes()}:${new Date().getSeconds()}
+  `;
+
+    historySection.appendChild(newDiv);
+
+    console.log(cardTitle);
   }
 }
 
@@ -60,13 +76,15 @@ donateBtn1.addEventListener("click", function () {
   const noakhaliBalance = toNumber(innerText("noakhaliBalance"));
   const newMainBalance = mainBalance - inputedTaka;
   const newNoakhaliBalance = noakhaliBalance + inputedTaka;
+
   inputValidation(
     inputedTaka,
     mainBalance,
     newMainBalance,
     newNoakhaliBalance,
     "main_balance",
-    "noakhaliBalance"
+    "noakhaliBalance",
+    innerText("noakhaliTitle")
   );
 
   console.log(
@@ -94,7 +112,8 @@ donateBtn2.addEventListener("click", function () {
     newMainBalance,
     newFeniBalance,
     "main_balance",
-    "feniBalance"
+    "feniBalance",
+    innerText("feniTitle")
   );
   //   setElement("main_balance", newMainBalance);
   //   setElement("feniBalance", newFeniBalance);
@@ -114,23 +133,24 @@ donateBtn3.addEventListener("click", function () {
     newMainBalance,
     newQoutaBanlance,
     "main_balance",
-    "qoutaBanlance"
+    "qoutaBanlance",
+    innerText("quotaTitle")
   );
-  const cardTitle = innerText("quotaTitle");
-  const historySection = getElement("donation_history_container");
-  const newDiv = document.createElement("Div");
-  newDiv.classList.add("border", "p-8", "rounded-2xl", "space-y-4");
-  newDiv.innerHTML = `
-   <h3 class="text-lg text-black font-bold">${inputedTaka} Taka is Donated for ${cardTitle}</h3>
-          <p class="text-base text-black/70 font-light">Date: ${new Date().getFullYear()}/${
-    new Date().getMonth() + 1
-  }/${new Date().getDate()} at ${new Date().getHours()}:${new Date().getMinutes()}:${new Date().getSeconds()}
-  `;
-  // } @ ${new Date().getHours()}:${new Date().getMinutes()()}:${new Date().getSeconds()}</p>
 
-  historySection.appendChild(newDiv);
+  // const cardTitle = innerText("quotaTitle");
+  // const historySection = getElement("donation_history_container");
+  // const newDiv = document.createElement("Div");
+  // newDiv.classList.add("border", "p-8", "rounded-2xl", "space-y-4");
+  // newDiv.innerHTML = `
+  //  <h3 class="text-lg text-black font-bold">${inputedTaka} Taka is Donated for ${cardTitle}</h3>
+  //         <p class="text-base text-black/70 font-light">Date: ${new Date().getFullYear()}/${
+  //   new Date().getMonth() + 1
+  // }/${new Date().getDate()} at ${new Date().getHours()}:${new Date().getMinutes()}:${new Date().getSeconds()}
+  // `;
 
-  console.log(historySection, cardTitle, newDiv);
+  // historySection.appendChild(newDiv);
+
+  // console.log(historySection, cardTitle, newDiv);
 
   // if()
   //   setElement("main_balance", newMainBalance);
@@ -138,3 +158,17 @@ donateBtn3.addEventListener("click", function () {
 });
 
 // donateBtn3.addEventListener("click", function () {});
+
+// hide unhide donation and history section
+
+// while click donation button
+getElement("donationBtn").addEventListener("click", function () {
+  getElement("donationSection").classList.remove("hidden");
+  getElement("donation_history_container").classList.add("hidden");
+  console.log("donationBtn");
+});
+// while click history button
+getElement("historyBtn").addEventListener("click", function () {
+  getElement("donationSection").classList.add("hidden");
+  getElement("donation_history_container").classList.remove("hidden");
+});
