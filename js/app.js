@@ -116,6 +116,25 @@ donateBtn3.addEventListener("click", function () {
     "main_balance",
     "qoutaBanlance"
   );
+  const cardTitle = innerText("quotaTitle");
+  const historySection = getElement("donation_history_container");
+  const newDiv = document.createElement("Div");
+  newDiv.classList.add("border", "p-8", "rounded-2xl", "space-y-4");
+  newDiv.innerHTML = `
+   <h3 class="text-lg text-black font-bold">${inputedTaka} Taka is Donated for ${cardTitle}</h3>
+          <p class="text-base text-black/70 font-light">Date: ${new Date().getFullYear()}/${
+    new Date().getMonth() + 1
+  }/${new Date().getDate()} at ${new Date().getHours()}:${new Date().getMinutes()}:${new Date().getSeconds()}
+  `;
+  // } @ ${new Date().getHours()}:${new Date().getMinutes()()}:${new Date().getSeconds()}</p>
+
+  historySection.appendChild(newDiv);
+
+  console.log(historySection, cardTitle, newDiv);
+
+  // if()
   //   setElement("main_balance", newMainBalance);
   //   setElement("qoutaBanlance", newQoutaBanlance);
 });
+
+// donateBtn3.addEventListener("click", function () {});
