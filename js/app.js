@@ -28,6 +28,13 @@ function toNumber(String) {
   return result;
 }
 
+function blankInput(id) {
+  const inputField = getElement(id);
+  console.log(id);
+  inputField.value = "";
+}
+// console.log(blankInput());
+
 // input validations
 function inputValidation(
   inputedTaka,
@@ -80,6 +87,7 @@ donateBtn1.addEventListener("click", function () {
     "noakhaliBalance",
     innerText("noakhaliTitle")
   );
+  blankInput("donateForNoakhali");
 });
 
 const donateBtn2 = getElement("donateBtn2");
@@ -99,6 +107,7 @@ donateBtn2.addEventListener("click", function () {
     "feniBalance",
     innerText("feniTitle")
   );
+  blankInput("donateForFeni");
 });
 
 const donateBtn3 = getElement("donateBtn3");
@@ -118,6 +127,7 @@ donateBtn3.addEventListener("click", function () {
     "qoutaBanlance",
     innerText("quotaTitle")
   );
+  blankInput("donateForQuota");
 });
 
 // hide unhide donation and history section
